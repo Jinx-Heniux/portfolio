@@ -1,0 +1,6 @@
+CREATE DATABASE influx_db_name IF NOT EXISTS
+CREATE USER influx_username WITH PASSWORD 'influx_password'
+GRANT ALL ON influx_db_name TO influx_username
+CREATE RETENTION POLICY influx_rp_name ON influx_db_name DURATION 52w REPLICATION 1 DEFAULT
+CREATE CONTINUOUS QUERY cq_dht22_1h ON influx_db_name BEGIN SELECT MEAN(temperature) AS  mean_temperature, MEAN(humidity) AS mean_humidity INTO influx_db_name."influx_rp_name"."cq_dht22_1h" FROM dht22 GROUP BY time(1h), gatewayId END
+CREATE CONTINUOUS QUERY cq_dht22_1d ON influx_db_name BEGIN SELECT MEAN(temperature) AS  mean_temperature, MEAN(humidity) AS mean_humidity, MIN(temperature) as min_temperature , MAX(temperature) as max_temperature, MIN(humidity) as min_humidity, MAX(humidity) as max_humidity INTO influx_db_name."influx_rp_name"."cq_dht22_1d" FROM dht22 GROUP BY time(1d), gatewayId END
