@@ -13,4 +13,4 @@ curl -i \
       "password": "influx_password",
       "database": "influx_db_name",
       "basicAuth":false }' \
-    http://localhost:3600/api/datasources
+    http://nextrun.fr:3600/api/datasources

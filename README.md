@@ -1,3 +1,22 @@
-# portfolio
+# Portfolio
+
+### Pull last image
+```bash
+docker-compose pull
+```
+
+### Build compose
+```bash
 docker-compose build
-docker-compose up -d
+```
+
+### Start compose
+```bash
+docker-compose up -d --force-recreate
+```
+
+### Stop compose
+```bash
+docker-compose stop
+```
+

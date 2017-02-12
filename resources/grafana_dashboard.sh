@@ -14,7 +14,6 @@ curl -i \
               "gnetId": null,
               "graphTooltip": 0,
               "hideControls": false,
-              "id": 1,
               "links": [],
               "refresh": false,
               "rows": [
@@ -162,11 +161,10 @@ curl -i \
                 ]
               },
               "timezone": "browser",
-              "title": "New dashboard Copy",
-              "version": 7
+              "title": "New dashboard Copy"
             }
             }
         }' \
-    http://localhost:3600/api/dashboards/db
+    http://nextrun.fr:3600/api/dashboards/db
 
 
