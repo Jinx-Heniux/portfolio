@@ -1,3 +1,7 @@
+### Architecture Overview
+
+![Architecture Overview](https://jluccisano.github.io/assets/images/reactive-architecture.png)
+
 # Portfolio
 
 ### Pull last image
